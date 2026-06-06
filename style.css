@@ -181,3 +181,56 @@ body {
 .language-switch a:hover {
   text-decoration: underline;
 }
+.caphe {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  text-align: center;
+  cursor: pointer;
+  animation: capheFloat 3s ease-in-out infinite;
+}
+
+.caphe img {
+  width: 95px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.caphe div {
+  background: #fff7ef;
+  border: 1px solid #d6a25d;
+  border-radius: 14px;
+  padding: 6px 10px;
+  margin-top: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.caphe strong {
+  display: block;
+  color: #6b3d22;
+  font-size: 15px;
+}
+
+.caphe span {
+  display: block;
+  color: #9b6a3c;
+  font-size: 12px;
+}
+
+.caphe-bubble {
+  background: white;
+  color: #6b3d22;
+  border: 1px solid #d6a25d;
+  border-radius: 18px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes capheFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
