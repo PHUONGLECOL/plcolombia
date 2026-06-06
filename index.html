@@ -47,13 +47,33 @@
 
   </main>
 
-  <div class="caphe">
-    <img src="caphe.png" alt="Caphe">
-    <div>
-      <strong>Cà phê</strong>
-      <span>Asistente Virtual</span>
-    </div>
+  <div class="caphe" onclick="window.open('https://wa.me/573188597639', '_blank')">
+  <div class="caphe-bubble" id="capheBubble">Xin chào! ☕</div>
+
+  <img src="caphe.png" alt="Cà phê">
+
+  <div>
+    <strong>Cà phê</strong>
+    <span>Asistente Virtual</span>
   </div>
+</div>
+
+<script>
+  const mensajesCaphe = [
+    "Xin chào! ☕",
+    "Welcome! ☕",
+    "¡Hola! ☕",
+    "¿Cómo puedo ayudarte?"
+  ];
+
+  let mensajeActual = 0;
+  const bubble = document.getElementById("capheBubble");
+
+  setInterval(() => {
+    mensajeActual = (mensajeActual + 1) % mensajesCaphe.length;
+    bubble.textContent = mensajesCaphe[mensajeActual];
+  }, 3000);
+
 <script>
   document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
