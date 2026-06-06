@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,13 +12,15 @@
   <header>
     <img src="logo-phuongle.png" alt="Phuongle Colombia" class="logo">
 
-  
-<div class="language-switch">
-  <a href="index.html">🇨🇴 Español</a>
-  <a href="index-en.html">🇺🇸 English</a>
-  <a href="index-vi.html">🇻🇳 Tiếng Việt</a>
-</div>
-    </header>
+    <div class="language-switch">
+      <a href="index.html">🇨🇴 Español</a>
+      |
+      <a href="index-en.html">🇺🇸 English</a>
+      |
+      <a href="index-vi.html">🇻🇳 Tiếng Việt</a>
+    </div>
+  </header>
+
   <main class="container">
 
     <section class="intro">
@@ -48,40 +51,42 @@
   </main>
 
   <div class="caphe" onclick="window.open('https://wa.me/573188597639', '_blank')">
-  <div class="caphe-bubble" id="capheBubble">Xin chào! ☕</div>
+    <div class="caphe-bubble" id="capheBubble">Xin chào! ☕</div>
 
-  <img src="caphe.png" alt="Cà phê">
+    <img src="caphe.png" alt="Cà phê">
 
-  <div>
-    <strong>Cà phê</strong>
-    <span>Asistente Virtual</span>
+    <div>
+      <strong>Cà phê</strong>
+      <span>Asistente Virtual</span>
+    </div>
   </div>
-</div>
 
-<script>
-  const mensajesCaphe = [
-    "Xin chào! ☕",
-    "Welcome! ☕",
-    "¡Hola! ☕",
-    "¿Cómo puedo ayudarte?"
-  ];
+  <script>
+    const mensajesCaphe = [
+      "Xin chào! ☕",
+      "Welcome! ☕",
+      "¡Hola! ☕",
+      "¿Cómo puedo ayudarte?"
+    ];
 
-  let mensajeActual = 0;
-  const bubble = document.getElementById("capheBubble");
+    let mensajeActual = 0;
+    const bubble = document.getElementById("capheBubble");
 
-  setInterval(() => {
-    mensajeActual = (mensajeActual + 1) % mensajesCaphe.length;
-    bubble.textContent = mensajesCaphe[mensajeActual];
-  }, 3000);
+    setInterval(() => {
+      mensajeActual = (mensajeActual + 1) % mensajesCaphe.length;
+      bubble.textContent = mensajesCaphe[mensajeActual];
+    }, 3000);
 
-<script>
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
 
-  document.addEventListener('dragstart', function(e) {
-    e.preventDefault();
-  });
-</script>
+    document.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+    });
+  </script>
+
 </body>
 </html>
+```
+
