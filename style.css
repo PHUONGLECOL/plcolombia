@@ -200,8 +200,12 @@ body {
 }
 
 .caphe div {
-  background: #fff7ef;
-  border: 1px solid #d6a25d;
+  background: white;
+  border: 1px solid #f0e5d8;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
   border-radius: 14px;
   padding: 6px 10px;
   margin-top: 5px;
