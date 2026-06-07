@@ -50,15 +50,33 @@ Chúng tôi mong muốn xây dựng cầu nối giữa hai đất nước thông
 
 </main>
 
-<div class="caphe">
-  <img src="caphe.png" alt="Caphe">
-  <div>
-    <strong>Cà Phê</strong>
+<div class="caphe" onclick="window.open('https://wa.me/573188597639', '_blank')">
+  <div class="caphe-bubble" id="capheBubble">Xin chào! 👋</div>
+
+  <img src="caphe.png" alt="Bé Cà Phê">
+
+  <div class="caphe-text">
+    <strong>Bé Cà Phê</strong>
     <span>Trợ lý ảo</span>
   </div>
 </div>
 
 <script>
+const mensajesCaphe = [
+  "Xin chào! 👋",
+  "Chào mừng bạn!",
+  "Tôi có thể giúp gì?",
+  "Từ Việt Nam 💛"
+];
+
+let mensajeActual = 0;
+const bubble = document.getElementById("capheBubble");
+
+setInterval(() => {
+  mensajeActual = (mensajeActual + 1) % mensajesCaphe.length;
+  bubble.textContent = mensajesCaphe[mensajeActual];
+}, 3000);
+
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 });
