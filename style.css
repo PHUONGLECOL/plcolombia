@@ -26,18 +26,16 @@ header {
 }
 
 .language-switch {
-  width: 100%;
   text-align: center;
-  margin: 20px auto 30px;
+  margin: 20px auto;
   font-size: 16px;
 }
 
 .language-switch a {
-  display: inline-block;
-  margin: 0 8px;
   text-decoration: none;
   font-weight: bold;
   color: #7b4a2e;
+  margin: 0 8px;
 }
 
 .language-switch a:hover {
@@ -49,7 +47,7 @@ header {
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 110px;
+  padding-bottom: 120px;
 }
 
 .intro h1 {
@@ -99,10 +97,11 @@ header {
 .buttons a {
   text-decoration: none;
   background: #7b4326;
-  color: #fff;
+  color: white;
   padding: 14px 22px;
   border-radius: 30px;
   font-size: 16px;
+  transition: 0.3s;
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
@@ -120,17 +119,23 @@ header {
   margin-bottom: 8px;
 }
 
+/* Protección básica de imágenes */
+
 img {
   -webkit-user-drag: none;
   user-select: none;
+  pointer-events: none;
 }
 
-/* ASISTENTE VIRTUAL BÉ CÀ PHÊ */
+/* ================================================= */
+/* BÉ CÀ PHÊ */
+/* ================================================= */
+
 .caphe {
   position: fixed;
   right: 18px;
   bottom: 18px;
-  width: 135px;
+  width: 120px;
   z-index: 9999;
   text-align: center;
   cursor: pointer;
@@ -138,61 +143,59 @@ img {
 }
 
 .caphe-bubble {
-  display: inline-block;
-  background: #fff4f7;
-  color: #6b3d22;
-  border: 1px solid #e8c7b3;
-  border-radius: 18px;
-  padding: 6px 10px;
-  margin-bottom: 6px;
+  color: #7b4326;
   font-size: 13px;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  white-space: nowrap;
+  margin-bottom: 4px;
 }
 
 .caphe img {
-  width: 95px;
+  width: 90px;
   height: auto;
   display: block;
   margin: 0 auto;
-  pointer-events: none;
 }
 
 .caphe-text {
-  background: white;
-  border: 1px solid #f0e5d8;
-  border-radius: 14px;
-  padding: 6px 8px;
-  margin-top: 5px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  margin-top: 4px;
 }
 
 .caphe-text strong {
   display: block;
   color: #6b3d22;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .caphe-text span {
   display: block;
   color: #9b6a3c;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 @keyframes capheFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
+/* Responsive */
+
 @media (max-width: 768px) {
+
   .intro h1 {
     font-size: 26px;
   }
 
   .intro h2 {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .main-photo {
@@ -205,25 +208,24 @@ img {
   }
 
   .caphe {
+    width: 100px;
     right: 10px;
     bottom: 10px;
-    width: 115px;
   }
 
   .caphe img {
-    width: 82px;
+    width: 75px;
   }
 
   .caphe-bubble {
     font-size: 12px;
-    padding: 5px 8px;
   }
 
   .caphe-text strong {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .caphe-text span {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
