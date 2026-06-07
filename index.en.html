@@ -50,15 +50,33 @@ We believe in creating a bridge between both countries through quality products 
 
 </main>
 
-<div class="caphe">
-  <img src="caphe.png" alt="Caphe">
-  <div>
-    <strong>Cà Phê</strong>
+<div class="caphe" onclick="window.open('https://wa.me/573188597639', '_blank')">
+  <div class="caphe-bubble" id="capheBubble">Welcome! 👋</div>
+
+  <img src="caphe.png" alt="Bé Cà Phê">
+
+  <div class="caphe-text">
+    <strong>Bé Cà Phê</strong>
     <span>Virtual Assistant</span>
   </div>
 </div>
 
 <script>
+const mensajesCaphe = [
+  "Welcome! 👋",
+  "Hello! 👋",
+  "Can I help you?",
+  "From Vietnam 💛"
+];
+
+let mensajeActual = 0;
+const bubble = document.getElementById("capheBubble");
+
+setInterval(() => {
+  mensajeActual = (mensajeActual + 1) % mensajesCaphe.length;
+  bubble.textContent = mensajesCaphe[mensajeActual];
+}, 3000);
+
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 });
