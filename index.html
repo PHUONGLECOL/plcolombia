@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,16 +12,13 @@
     <img src="logo-phuongle.png" alt="Phuongle Colombia" class="logo">
 
     <div class="language-switch">
-      <a href="index.html">🇨🇴 Español</a>
-      |
-      <a href="index-en.html">🇺🇸 English</a>
-      |
+      <a href="index.html">🇨🇴 Español</a> |
+      <a href="index-en.html">🇺🇸 English</a> |
       <a href="index-vi.html">🇻🇳 Tiếng Việt</a>
     </div>
   </header>
 
   <main class="container">
-
     <section class="intro">
       <h1>Beauty Care • Personal Care • Wellness</h1>
       <h2>De Vietnam con amor</h2>
@@ -47,16 +43,15 @@
         <p><strong>Tiếng Việt:</strong> Sắp ra mắt. Từ Việt Nam với yêu thương.</p>
       </div>
     </section>
-
   </main>
 
   <div class="caphe" onclick="window.open('https://wa.me/573188597639', '_blank')">
     <div class="caphe-bubble" id="capheBubble">Xin chào! ☕</div>
 
-    <img src="caphe.png" alt="Cà phê">
+    <img src="caphe.png" alt="Bé Cà Phê">
 
-    <div>
-      <strong>Cà phê</strong>
+    <div class="caphe-text">
+      <strong>Bé Cà Phê</strong>
       <span>Asistente Virtual</span>
     </div>
   </div>
@@ -66,7 +61,7 @@
       "Xin chào! ☕",
       "Welcome! ☕",
       "¡Hola! ☕",
-      "¿Cómo puedo ayudarte?"
+      "¿Te ayudo?"
     ];
 
     let mensajeActual = 0;
@@ -77,16 +72,9 @@
       bubble.textContent = mensajesCaphe[mensajeActual];
     }, 3000);
 
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-    });
-
-    document.addEventListener('dragstart', function(e) {
-      e.preventDefault();
-    });
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
   </script>
 
 </body>
 </html>
-```
-
