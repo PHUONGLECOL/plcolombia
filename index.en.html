@@ -10,17 +10,17 @@
 
 <header>
   <img src="logo-phuongle.png" alt="Phuongle Colombia" class="logo">
+
+  <div class="language-switch">
+    <a href="index.html">🇨🇴 Español</a> |
+    <a href="index-en.html">🇺🇸 English</a> |
+    <a href="index-vi.html">🇻🇳 Tiếng Việt</a>
+  </div>
 </header>
 
 <main class="container">
 
 <section class="intro">
-
-<div class="language-switch">
-  <a href="index.html">🇨🇴 Español</a> |
-  <a href="index-en.html">🇺🇸 English</a> |
-  <a href="index-vi.html">🇻🇳 Tiếng Việt</a>
-</div>
 
 <h1>Beauty Care • Personal Care • Wellness</h1>
 <h2>From Vietnam with Love</h2>
@@ -29,7 +29,7 @@
 
 <p>
 We are building something special to bring carefully selected Vietnamese products to Colombia,
-focused on beauty, wellness, and personal care.
+focused on beauty, wellness and personal care.
 </p>
 
 <p>
@@ -42,16 +42,25 @@ We believe in creating a bridge between both countries through quality products 
 
 <div class="buttons">
   <a href="mailto:care@phuonglecol.com">📧 Contact</a>
-  <a href="https://wa.me/84375055458" target="_blank">🇻🇳 Vietnam WhatsApp / Zalo</a>
-  <a href="https://wa.me/573188597639" target="_blank">🇨🇴 Colombia WhatsApp</a>
+  <a href="https://wa.me/84375055458" target="_blank">
+    🇻🇳 Vietnam WhatsApp / Zalo
+  </a>
+  <a href="https://wa.me/573188597639" target="_blank">
+    🇨🇴 Colombia WhatsApp
+  </a>
 </div>
 
 </section>
 
 </main>
 
+<!-- BÉ CÀ PHÊ -->
+
 <div class="caphe" onclick="window.open('https://wa.me/573188597639', '_blank')">
-  <div class="caphe-bubble" id="capheBubble">Welcome! 👋</div>
+
+  <div class="caphe-bubble" id="capheBubble">
+    Welcome! 👋
+  </div>
 
   <img src="caphe.png" alt="Bé Cà Phê">
 
@@ -59,9 +68,11 @@ We believe in creating a bridge between both countries through quality products 
     <strong>Bé Cà Phê</strong>
     <span>Virtual Assistant</span>
   </div>
+
 </div>
 
 <script>
+
 const mensajesCaphe = [
   "Welcome! 👋",
   "Hello! 👋",
@@ -70,12 +81,15 @@ const mensajesCaphe = [
 ];
 
 let mensajeActual = 0;
+
 const bubble = document.getElementById("capheBubble");
 
-setInterval(() => {
-  mensajeActual = (mensajeActual + 1) % mensajesCaphe.length;
-  bubble.textContent = mensajesCaphe[mensajeActual];
-}, 3000);
+if (bubble) {
+  setInterval(function () {
+    mensajeActual = (mensajeActual + 1) % mensajesCaphe.length;
+    bubble.textContent = mensajesCaphe[mensajeActual];
+  }, 3000);
+}
 
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
@@ -84,6 +98,7 @@ document.addEventListener('contextmenu', function(e) {
 document.addEventListener('dragstart', function(e) {
   e.preventDefault();
 });
+
 </script>
 
 </body>
